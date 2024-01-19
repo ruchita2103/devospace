@@ -1,0 +1,649 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    height: 25px;
+    margin-right: 5px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a {
+    margin-right: 20px; /* Add margin to both icons and text */
+}
+
+
+.consult-button {
+    
+    border-radius: 30px; 
+    margin-left: auto;/* Add margin to the left of the "Consult an Expert" button */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.login-button {
+    background-color: orange;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-icon,
+.consult-button {
+    background-color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+main {
+    padding: 10px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+/* Interactive Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.title {
+    animation: fadeIn 1.5s ease-in-out;
+    font-size: 4em;
+    display: inline-block;
+}
+
+.title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    animation: move-letters 3s linear infinite, change-size 3s ease-in-out infinite, change-color 3s ease-in-out infinite;
+}
+
+.title::first-letter {
+    display: inline-block;
+    width: 15em;
+    height: 15em;
+    background: url('logo5.jpg') center/contain no-repeat;
+    background-size: cover;
+    margin-top: 18em;
+    margin-right: 0.1em;
+    color: transparent;
+    margin-bottom: 0%;
+}
+
+@keyframes move-letters {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes change-size {
+    0% {
+        font-size: 3em;
+    }
+    50% {
+        font-size: 3.5em;
+    }
+    100% {
+        font-size: 3em;
+    }
+}
+
+@keyframes change-color {
+    0% {
+        color: #FFA500;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+/* Hover effect for Consult an Expert button */
+.consult-button:hover {
+    background-color: #f0f0f0;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#searchInput {
+    padding: 8px 40px 8px 8px; /* Adjusted right padding to accommodate the icon */
+    width: 500px;
+    border: 3px solid #333;
+    border-radius: 60px;
+    outline: none;
+    height: 25px;
+}
+
+
+.search-icon {
+    height: 20px;
+    cursor: pointer;
+    margin-left: -32px; /* Adjusted margin to bring the icon inside the search bar */
+}
+#suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-top: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align buttons to the center */
+}
+
+#suggestions li {
+    flex: 1 3 calc(35% - 4px); /* Adjust the width as needed with desired spacing */
+    max-width: calc(10% - 2px); 
+    box-sizing: border-box; 
+    padding: 2px;
+    margin: 4px; 
+    cursor: pointer;
+    border: 2px solid rgb(177, 167, 167); /* Black border */
+    border-radius: 22px; /* Add border-radius for curved edges */
+    background-color: #d6d1d1;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+
+#suggestions li:hover {
+    background-color: #ef0808;
+}
+/* Your existing CSS styles */
+
+/* Your existing CSS styles */
+
+/* Your existing CSS styles */
+
+/* Your existing CSS styles */
+
+.scroll-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+
+
+
+.additional-heading {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    background-color: #fff; /* Optional: Add background color */
+    padding: 10px; /* Optional: Add padding */
+}
+
+/* Add the new styles */
+/* Add the new styles */
+/* Updated styles with decreased image size and fixed rows */
+
+/* Your existing styles */
+
+.slider-heading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    color: #ae1d1d
+}
+
+/* Your existing styles */
+
+
+
+.image-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 30%;
+}
+
+.image-slider img {
+    width: 100%;
+    
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 80px;
+    margin-right: 100px;
+    margin-bottom: 0px; /* Adjust the margin between images */
+}
+
+.image-container::before,
+.image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40px; /* Adjust the gap between images */
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+}
+
+.image-container::before {
+    right: 0;
+}
+
+.image-container::after {
+    left: 0;
+}
+
+
+/* Your existing styles for image slider */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.card {
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(32, 29, 29, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border: 3px solid #6b5b84;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    align-items: flex-start;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+h3 {
+    margin: 0;
+    color: #333;
+}
+
+p {
+    margin: 10px 0 0;
+    color: #666;
+}
+.w{
+    
+    text-align: center;
+    font-style: bolder;
+    color: #861e3b;
+    font-size: xx-large;
+
+}
+.work-section {
+    text-align: center;
+  }
+  
+  .work-heading {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .custom-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .custom-card {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    font-size: larger;
+    color: #0c0101;
+    box-shadow: 0 4px 8px rgba(31, 30, 30, 0.1);
+    transition: transform 0.5s;
+    border: 4px solid #1b1717; 
+  }
+  
+  .custom-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+  }
+  
+  .custom-card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.7);
+    color: #0c0101;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .custom-card-info h3 {
+    font-size: 23px; /* Set the font size for the heading */
+    margin-bottom: 10px;
+    color: #0c0101; /* Adjust the margin as needed */
+  }
+  
+  .custom-card-info p {
+    font-size: 12px; /* Set the font size for the paragraph */
+    margin: 0;
+    color: #b8c71a; /* Remove default margin for the paragraph */
+  }
+  .custom-card:hover {
+    transform: scale(1.3);
+    
+  }
+  
+  .custom-card:hover .custom-card-info {
+    opacity: 1;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .pricing-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    padding: 20px;
+}
+  
+  .pricing-card {
+    width: 300px; /* Set a fixed width for all cards */
+    height: auto; /* Set a fixed height for all cards */
+    margin: 20px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+  
+  .pricing-header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .pricing-header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 18px;
+    padding: 10px; /* Add padding for better visual appearance */
+    background-color: #444; /* Adjust background color if needed */
+    text-align: center; /* Center the text */
+}
+
+  .pricing-features {
+    padding: 20px;
+    flex-grow: 1; /* Allow the features section to grow and take remaining space */
+    overflow: auto; /* Add scrollbar if content exceeds the specified height */
+  }
+  
+  
+  .pricing-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pricing-features li {
+    margin-bottom: 10px;
+  }
+  
+  .get-started-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #e7600c;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.testimonials-container {
+    display: flex;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.testimonial {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: #cda5c1; /* Blue background */
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+.customer-image {
+    border-radius: 6%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.customer-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    flex: 1;
+}
+
+.testimonial h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.stars {
+    color: #fdd835; /* Yellow color for stars */
+    font-size: 24px;
+}
+
+.testimonial p {
+    color: #666;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.reviews-section {
+    /* Your styles for the reviews section */
+}
+
+.faq-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Adjusted alignment to the top */
+    height: 100vh;  /* Adjust the height as needed */
+}
+
+.faq-content {
+    width: 50%; /* Adjust the width of the FAQ section */
+    text-align: left;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+h2 {
+    color: #333;
+    font-weight: bold;
+   
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+
+span {
+    display: inline-block;
+    position: relative;
+}
+
+span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+}
+
+
+.faq-image-container img {
+    width: 100%;
+    height: 280px;
+  
+    border-radius: 18px 8px 0 0;
+   
+}
+.faq-image-container {
+    width: 20%; /* Adjust the width as needed */
+    margin-right: 0px;
+     /* Add margin to create space between the image and content */
+}
+
+.ruc {
+    position: relative;
+ 
+}
+
+.ruc img {
+    width: 100%;
+    height: auto;
+    margin-top: 0px; /* Adjusted margin-top to decrease the gap */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
